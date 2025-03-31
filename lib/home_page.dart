@@ -37,7 +37,14 @@ class _HomePageState extends State<HomePage> {
           child: Text('Weather App', style: TextStyle(color: Colors.white)),
         ),
         backgroundColor: const Color.fromARGB(255, 26, 26, 26),
-        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.refresh))],
+        actions: [
+          IconButton(
+            onPressed: () {
+              setState(() {});
+            },
+            icon: Icon(Icons.refresh),
+          ),
+        ],
       ),
       body: FutureBuilder(
         future: getData(),
